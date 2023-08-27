@@ -10,12 +10,13 @@ const callBackFn = (req, res ,next) =>{
 
 const secondCallback = (req,res,next)=>{
     console.log("second middleware")
-    next()  //next()allows the request to continue to the next niddleware in the line
+    // next()  //next()allows the request to continue to the next niddleware in the line
+    res.send('<h1>home page</h1>')
 }
 
 
 app.use(callBackFn)  //---> allows us to create middleware
-app.use(secondCallback)
+app.use('/home',secondCallback)
 
 const handleRequest = (req, res)=>{
     res.send("express chal gya")
