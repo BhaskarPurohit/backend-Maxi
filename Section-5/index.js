@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()  //creating express application 
 const port = 3000
 const bodyParser = require('body-parser')
-
+import {Router} from './routes/admin'
 app.use(bodyParser.urlencoded({extended: false}))
 
 // const callBackFn = (req, res ,next) =>{
