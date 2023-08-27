@@ -18,9 +18,10 @@ const secondMiddleWare = (req, res, next)=>{
 
 
 
+
 app.use('/',firstMiddleWare)
 app.use('/users', secondMiddleWare)
-
+app.use('/add-product', addProduct)
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
